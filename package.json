@@ -1,0 +1,24 @@
+{
+  "name": "@ade/design-system",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Design system Smart Sampa: tokens de cor, tipografia, espaçamento, cantos, logotipo e gradientes.",
+  "files": [
+    "tokens.json",
+    "tokens.css",
+    "tailwind.css",
+    "AGENTS.md",
+    "README.md",
+    "assets"
+  ],
+  "exports": {
+    "./tokens.css": "./tokens.css",
+    "./tailwind.css": "./tailwind.css",
+    "./tokens.json": "./tokens.json",
+    "./AGENTS.md": "./AGENTS.md",
+    "./assets/*": "./assets/*"
+  },
+  "scripts": {
+    "build": "python build-tokens.py"
+  }
+}

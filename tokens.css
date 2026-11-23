@@ -1,7 +1,5 @@
 /* Smart Sampa — gerado de tokens.json por build-tokens.py. Não edite à mão. */
 
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@300;500;700&family=Open+Sans:wght@300;400;600&display=swap');
-
 :root,
 [data-theme="dark"] {
   color-scheme: dark;
@@ -48,11 +46,12 @@
   --space-4: 16px;
   --space-6: 24px;
   --space-10: 40px;
-  --radius-sm: 4px;
-  --radius-md: 12px;
+  --radius-tag: 4px;
+  --radius-painel: 12px;
   --radius-pill: 999px;
 }
 
+@layer components {
 /* Títulos (Kallisto) */
 .titulo-hero {
   font-family: var(--font-display);
@@ -113,4 +112,6 @@
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
+}
+
 }

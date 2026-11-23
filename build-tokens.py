@@ -1,7 +1,7 @@
-"""Gera tokens.css a partir de tokens.json.
+"""Gera tokens.css e tailwind.css a partir de tokens.json.
 
 Uso:  python build-tokens.py
-Edite sempre o tokens.json; o tokens.css é gerado e não deve ser editado à mão.
+Edite sempre o tokens.json; tokens.css e tailwind.css são gerados e não devem ser editados à mão.
 """
 import json
 import re
@@ -27,8 +27,6 @@ first = themes[0]
 color_tokens = tokens["color"]["tokens"]
 
 out = [f"/* {tokens['name']} — gerado de tokens.json por build-tokens.py. Não edite à mão. */", ""]
-out.append("@import url('https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@300;500;700&family=Open+Sans:wght@300;400;600&display=swap');")
-out.append("")
 
 # Tema padrão (primeiro tema) em :root
 out.append(f":root,\n[data-theme=\"{first}\"] {{")
@@ -61,7 +59,8 @@ for fam in ("spacing", "radius"):
 out.append("}")
 out.append("")
 
-# Classes de estilo tipográfico
+# Classes de estilo tipográfico (em @layer components: utilitários do Tailwind vencem)
+out.append("@layer components {")
 for group in tokens["type"]["groups"]:
     out.append(f"/* {group['name']} */")
     for s in group["styles"]:
@@ -80,5 +79,26 @@ for group in tokens["type"]["groups"]:
         out.append("}")
     out.append("")
 
+out.append("}")
+out.append("")
+
 (ROOT / "tokens.css").write_text("\n".join(out), encoding="utf-8")
-print(f"tokens.css gerado: {len(color_tokens)} cores, temas {themes}")
+# ---------- tailwind.css (Tailwind v4) ----------
+tw = [f"/* {tokens['name']} — tema Tailwind v4 gerado de tokens.json por build-tokens.py. Não edite à mão. */",
+      "/* Importe depois de tokens.css. As cores apontam para as variáveis de tokens.css, então seguem data-theme. */", ""]
+tw.append("@theme inline {")
+for t in color_tokens:
+    tw.append(f"  --color-{t['name']}: var(--{t['name']});")
+tw.append("}")
+tw.append("")
+# Fontes e cantos não mudam com o tema: valores literais (os mesmos de tokens.css)
+tw.append("@theme {")
+for key, stack in tokens["type"]["families"].items():
+    tw.append(f"  --font-{key}: {stack};")
+for t in tokens.get("radius", {}).get("tokens", []):
+    tw.append(f"  --{t['name']}: {px(t['value'])};")
+tw.append("}")
+tw.append("")
+(ROOT / "tailwind.css").write_text("\n".join(tw), encoding="utf-8")
+
+print(f"tokens.css e tailwind.css gerados: {len(color_tokens)} cores, temas {themes}")

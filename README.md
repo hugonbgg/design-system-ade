@@ -70,7 +70,7 @@ Os gradientes "pulsar" são fundos de luz difusa: faixas verticais de `lilas`, `
 ## Espaçamento e cantos
 
 - Espaçamento em quatro passos: `space-2` (8), `space-4` (16), `space-6` (24), `space-10` (40). As margens externas das telas usam `space-10`.
-- Cantos: `radius-sm` (4) em tags, `radius-md` (12) em painéis e cartões de evento, `radius-pill` em botões de chamada.
+- Cantos: `radius-tag` (4) em tags, `radius-painel` (12) em painéis e cartões de evento, `radius-pill` em botões de chamada.
 
 ## Logotipo
 
@@ -89,23 +89,43 @@ O caderno não define um conjunto de ícones. As telas usam pictogramas lineares
 | Arquivo | O que é |
 |---|---|
 | `tokens.json` | Fonte única de todos os valores. Edite só aqui. |
-| `tokens.css` | Variáveis CSS e classes tipográficas geradas a partir do `tokens.json`. Não edite à mão. |
-| `build-tokens.py` | Gera o `tokens.css`: rode `python build-tokens.py` depois de mudar o `tokens.json`. |
-| `assets/logos/` | Logotipo em SVG (positivo, negativo branco, negativo azul). |
-| `assets/gradientes/` | Os três gradientes "pulsar". |
+| `tokens.css` | Variáveis CSS e classes tipográficas. Gerado, não edite à mão. |
+| `tailwind.css` | Tema Tailwind v4 (`bg-surface`, `font-display`, `rounded-painel`…). Gerado, não edite à mão. |
+| `build-tokens.py` | Gera `tokens.css` e `tailwind.css`: rode `python build-tokens.py` depois de mudar o `tokens.json`. |
+| `AGENTS.md` | Regras para agentes de IA seguirem o design system. |
+| `package.json` | Publica esta pasta como o pacote `@ade/design-system`. |
+| `assets/logos/`, `assets/gradientes/` | Logotipo em SVG e os três gradientes "pulsar". |
 
-Para usar num projeto, copie o `tokens.css` (ou importe-o pelo caminho) e use as variáveis:
+### Num projeto com Tailwind v4
+
+1. Instale o pacote apontando para esta pasta: `"@ade/design-system": "file:../Design System ADE"` no `package.json` e `npm install` (ou `bun install`).
+2. No CSS principal:
 
 ```css
-@import "tokens.css";
-
-body { background: var(--surface); color: var(--ink); font-family: var(--font-text); }
-.alerta { background: var(--status-alerta); color: var(--on-claro); }
+@import "tailwindcss";
+@import "@ade/design-system/tokens.css";
+@import "@ade/design-system/tailwind.css";
 ```
+
+3. No `index.html`, carregue as fontes:
 
 ```html
-<h1 class="titulo-hero">O que faz uma cidade pulsar?</h1>
-<p class="corpo">Texto corrido em Open Sans.</p>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@300;500;700&family=Open+Sans:wght@300;400;600&display=swap">
 ```
 
-O tema escuro é o padrão. Para o tema claro, coloque `data-theme="light"` no `<html>` ou em qualquer contêiner.
+4. Para o agente seguir as regras, crie um `CLAUDE.md` na raiz do projeto com a linha:
+
+```
+@node_modules/@ade/design-system/AGENTS.md
+```
+
+Uso:
+
+```html
+<main class="bg-surface text-ink p-10">
+  <h1 class="titulo-hero">O que faz uma cidade pulsar?</h1>
+  <span class="bg-status-alerta text-on-claro rotulo rounded-tag px-2">Alerta</span>
+</main>
+```
+
+O tema escuro é o padrão. Para o claro, coloque `data-theme="light"` no `<html>` ou em qualquer contêiner.

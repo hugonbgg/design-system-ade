@@ -1,0 +1,35 @@
+/* Smart Sampa — tema Tailwind v4 gerado de tokens.json por build-tokens.py. Não edite à mão. */
+/* Importe depois de tokens.css. As cores apontam para as variáveis de tokens.css, então seguem data-theme. */
+
+@theme inline {
+  --color-rosa: var(--rosa);
+  --color-lilas: var(--lilas);
+  --color-azul-claro: var(--azul-claro);
+  --color-verde: var(--verde);
+  --color-azul-escuro: var(--azul-escuro);
+  --color-preto: var(--preto);
+  --color-branco: var(--branco);
+  --color-logo-azul-marinho: var(--logo-azul-marinho);
+  --color-logo-azul: var(--logo-azul);
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-line: var(--line);
+  --color-on-claro: var(--on-claro);
+  --color-status-critico: var(--status-critico);
+  --color-status-critico-area: var(--status-critico-area);
+  --color-status-critico-texto: var(--status-critico-texto);
+  --color-status-alerta: var(--status-alerta);
+  --color-status-alerta-texto: var(--status-alerta-texto);
+  --color-status-estavel: var(--status-estavel);
+  --color-status-estavel-texto: var(--status-estavel-texto);
+}
+
+@theme {
+  --font-display: Kallisto, "Lexend Exa", "Open Sans", sans-serif;
+  --font-text: "Open Sans", system-ui, sans-serif;
+  --radius-tag: 4px;
+  --radius-painel: 12px;
+  --radius-pill: 999px;
+}
