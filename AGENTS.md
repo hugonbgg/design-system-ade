@@ -7,7 +7,7 @@ Este projeto usa o design system Smart Sampa (pacote `@ade/design-system`). Siga
 - O CSS principal importa, nesta ordem: `tailwindcss`, `@ade/design-system/tokens.css`, `@ade/design-system/tailwind.css`.
 - Kallisto é licenciada (comprada da Device) e servida pelo próprio projeto: os arquivos `Kallisto-Thin/Light/Medium/Bold.woff2` ficam em `public/fonts/kallisto/`. O `tokens.css` já declara o `@font-face` apontando para lá.
 - Nunca coloque os arquivos da Kallisto em repositório público, nem dentro deste pacote. Se o projeto for público, pare e avise.
-- Open Sans e Lexend Exa (reserva da Kallisto) vêm do Google Fonts por `<link>` no `index.html`: Open Sans (300, 400, 600) e Lexend Exa (300, 500, 700).
+- Saira (fonte de texto) e Lexend Exa (reserva da Kallisto) vêm do Google Fonts por `<link>` no `index.html`: Saira (300, 400, 500) e Lexend Exa (300, 500, 700).
 - Nunca edite `tokens.css` nem `tailwind.css`: são gerados a partir de `tokens.json` no repositório do design system.
 
 ## Cores
@@ -49,7 +49,7 @@ Este projeto usa o design system Smart Sampa (pacote `@ade/design-system`). Siga
 
 ## Tipografia
 
-- Títulos e rótulos: `font-display` (Kallisto), sempre em caixa alta. Textos: `font-text` (Open Sans).
+- Títulos e rótulos: `font-display` (Kallisto), sempre em caixa alta. Textos: `font-text` (Saira). Nunca use Kallisto em parágrafos ou frases longas: em caixa baixa e bloco, ela cansa a leitura.
 - Kallisto em caixa alta nunca fica com espaçamento normal ou fechado: as letras se encostam e o título vira um bloco. Mínimo de 0.05em em títulos, 0.06em em títulos de card e 0.1em em rótulos pequenos. As classes prontas já trazem esses valores; não sobrescreva com `tracking-normal`, `tracking-tight` etc.
 - Pesos: títulos grandes em Light (`titulo-hero`, `titulo`); títulos de card e subtítulos em Medium (`titulo-card`, `subtitulo`); números em Bold (`numero`).
 - Títulos de cards e de itens de lista usam `titulo-card`. Links e ações secundárias não levam caixa alta: ficam na fonte de texto, em `text-ink-muted`.

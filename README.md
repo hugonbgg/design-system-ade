@@ -62,15 +62,16 @@ Os gradientes "pulsar" são fundos de luz difusa: faixas verticais de `lilas`, `
 | Família | Papel | Pesos |
 |---|---|---|
 | **Kallisto** | Títulos, rótulos, números (`display`) | Light 300 para títulos, Medium 500 para rótulos, Bold 700 para números |
-| **Open Sans** | Textos (`text`) | Light 300, Regular 400 |
+| **Saira** | Textos (`text`) | Light 300, Regular 400, Medium 500 |
 
 - Títulos (`titulo-hero`, `titulo`, `subtitulo`, `titulo-card`) em Kallisto e sempre em caixa alta.
 - Kallisto em caixa alta sempre com espaçamento aberto: 0.05em nos títulos, 0.06em em títulos de card, 0.1em em rótulos. Com espaçamento fechado as letras se encostam. Títulos grandes em Light, títulos de card e subtítulos em Medium.
 - Texto de apoio (descrições, legendas) fica abaixo do título na hierarquia: `ink-muted` ou peso leve.
 - Rótulos, tags e botões em `rotulo`: Kallisto Medium 13px, caixa alta, espaçamento de 0.08em.
 - Indicadores numéricos em `numero`, com três dígitos ("040", "045").
-- Texto corrido em `corpo` (Open Sans 16/24). Em telas escuras, `corpo-leve` só a partir de 16px.
-- Kallisto é licenciada (comprada da Device) e servida por cada projeto em `public/fonts/kallisto/` (Thin, Light, Medium e Bold em `.woff2`). O `tokens.css` já declara o `@font-face`. Os arquivos não ficam neste repositório, que é público: guarde o pacote original num local privado do time. Sem os arquivos, a pilha usa **Lexend Exa** (Google Fonts) como reserva. Open Sans vem do Google Fonts.
+- Texto corrido em `corpo` (Saira 16/24). Em telas escuras, `corpo-leve` só a partir de 16px.
+- Kallisto é licenciada (comprada da Device) e servida por cada projeto em `public/fonts/kallisto/` (Thin, Light, Medium e Bold em `.woff2`). O `tokens.css` já declara o `@font-face`. Os arquivos não ficam neste repositório, que é público: guarde o pacote original num local privado do time. Sem os arquivos, a pilha usa **Lexend Exa** (Google Fonts) como reserva. Saira vem do Google Fonts.
+- A fonte de texto foi trocada: o caderno da Bijari define Open Sans, mas nas aplicações digitais a ADE usa **Saira**, cujas formas quadradas conversam com a Kallisto. Kallisto fica só em títulos, rótulos e números; em parágrafo ela cansa a leitura.
 
 ## Espaçamento e cantos
 
@@ -113,10 +114,10 @@ O caderno não define um conjunto de ícones. As telas usam pictogramas lineares
 ```
 
 3. Copie os arquivos da Kallisto (`Kallisto-Thin.woff2`, `-Light`, `-Medium`, `-Bold`) para `public/fonts/kallisto/` do projeto. Só em repositório privado.
-4. No `index.html`, carregue as fontes do Google (Open Sans e a reserva Lexend Exa):
+4. No `index.html`, carregue as fontes do Google (Saira e a reserva Lexend Exa):
 
 ```html
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@300;500;700&family=Open+Sans:wght@300;400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@300;500;700&family=Saira:wght@300;400;500&display=swap">
 ```
 
 5. Para o agente seguir as regras, crie um `CLAUDE.md` na raiz do projeto com a linha:

@@ -74,8 +74,8 @@
 }
 
 :root {
-  --font-display: Kallisto, "Lexend Exa", "Open Sans", sans-serif;
-  --font-text: "Open Sans", system-ui, sans-serif;
+  --font-display: Kallisto, "Lexend Exa", Saira, sans-serif;
+  --font-text: Saira, system-ui, sans-serif;
   --space-2: 8px;
   --space-4: 16px;
   --space-6: 24px;
@@ -136,7 +136,7 @@
   font-variant-numeric: tabular-nums;
 }
 
-/* Textos (Open Sans) */
+/* Textos (Saira) */
 .corpo {
   font-family: var(--font-text);
   font-size: 16px;
