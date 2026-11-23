@@ -29,6 +29,7 @@ A paleta oficial tem seis cores. Use os nomes da paleta como nome dos tokens.
 - O caderno escreve as etiquetas da paleta em branco sobre todas as cores. Sobre `azul-claro` e `verde` isso fica abaixo de 3:1; nas telas, prefira `on-claro`.
 - `logo-azul-marinho` e `logo-azul` são exclusivas do logotipo. Não use em interface.
 - **Destaque** é um papel, não uma cor nova: `destaque` aponta hoje para `azul-claro`. Use-o para item ativo, foco, link, progresso e botão principal, com `on-destaque` para o texto por cima e `destaque-texto` para texto colorido. Nunca use uma cor de eixo ou de status como destaque genérico.
+- Use o destaque com parcimônia: no máximo um elemento em destaque por área. Em grades de cards, a ação repetida de cada card fica em `ink-muted`.
 - `surface-raised`, `ink-muted` e `line` são derivados da paleta para dar estrutura às telas. Eles não aparecem no caderno.
 
 ## Estados da cidade (status)
@@ -64,6 +65,7 @@ Os gradientes "pulsar" são fundos de luz difusa: faixas verticais de `lilas`, `
 | **Open Sans** | Textos (`text`) | Light 300, Regular 400 |
 
 - Títulos (`titulo-hero`, `titulo`, `subtitulo`) em Kallisto e sempre em caixa alta.
+- Espaçamento largo entre letras só em títulos de tela, rótulos curtos e no botão principal. Títulos de cards usam espaçamento normal.
 - Rótulos, tags e botões em `rotulo`: Kallisto Medium 13px, caixa alta, espaçamento de 0.08em.
 - Indicadores numéricos em `numero`, com três dígitos ("040", "045").
 - Texto corrido em `corpo` (Open Sans 16/24). Em telas escuras, `corpo-leve` só a partir de 16px.

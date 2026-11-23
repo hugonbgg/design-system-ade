@@ -22,6 +22,7 @@ Este projeto usa o design system Smart Sampa (pacote `@ade/design-system`). Siga
 
 - Para item ativo ou selecionado, foco, link, progresso e botão principal, use o papel de destaque: `bg-destaque` com `text-on-destaque`, `text-destaque-texto`, `border-destaque`, `ring-destaque`.
 - Nunca use uma cor de eixo (`rosa`, `azul-claro`…) como destaque genérico, e nunca use as cores de status como destaque: vermelho é só `status-critico`.
+- Use o destaque com parcimônia: no máximo um elemento em destaque por área da tela (a ação principal ou o item selecionado). Em listas e grades de cards, a ação repetida de cada card não leva destaque: use `text-ink-muted` ou só o ícone de seta, já que o card inteiro é clicável.
 
 ## Véus sobre fotos
 
@@ -40,6 +41,7 @@ Este projeto usa o design system Smart Sampa (pacote `@ade/design-system`). Siga
 ## Tipografia
 
 - Títulos e rótulos: `font-display` (Kallisto), sempre em caixa alta. Textos: `font-text` (Open Sans).
+- Caixa alta com espaçamento largo entre letras (`tracking` aberto) só em títulos de tela, rótulos curtos e no botão principal. Títulos de cards e de itens de lista usam espaçamento normal ou menor, para não quebrar linha à toa. Links e ações secundárias não levam caixa alta espaçada.
 - Prefira as classes prontas: `titulo-hero`, `titulo`, `subtitulo`, `rotulo`, `numero`, `corpo`, `corpo-leve`, `legenda`.
 - Não use outras famílias de fonte.
 
