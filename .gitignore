@@ -17,3 +17,7 @@ Kallisto Font/
 *.ttf
 *.woff
 *.woff2
+
+# Páginas locais de teste (usam as fontes licenciadas)
+_*.html
+.claude/

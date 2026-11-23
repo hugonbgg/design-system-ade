@@ -64,8 +64,9 @@ Os gradientes "pulsar" são fundos de luz difusa: faixas verticais de `lilas`, `
 | **Kallisto** | Títulos, rótulos, números (`display`) | Light 300 para títulos, Medium 500 para rótulos, Bold 700 para números |
 | **Open Sans** | Textos (`text`) | Light 300, Regular 400 |
 
-- Títulos (`titulo-hero`, `titulo`, `subtitulo`) em Kallisto e sempre em caixa alta.
-- Espaçamento largo entre letras só em títulos de tela, rótulos curtos e no botão principal. Títulos de cards usam espaçamento normal.
+- Títulos (`titulo-hero`, `titulo`, `subtitulo`, `titulo-card`) em Kallisto e sempre em caixa alta.
+- Kallisto em caixa alta sempre com espaçamento aberto: 0.05em nos títulos, 0.06em em títulos de card, 0.1em em rótulos. Com espaçamento fechado as letras se encostam. Títulos grandes em Light, títulos de card e subtítulos em Medium.
+- Texto de apoio (descrições, legendas) fica abaixo do título na hierarquia: `ink-muted` ou peso leve.
 - Rótulos, tags e botões em `rotulo`: Kallisto Medium 13px, caixa alta, espaçamento de 0.08em.
 - Indicadores numéricos em `numero`, com três dígitos ("040", "045").
 - Texto corrido em `corpo` (Open Sans 16/24). Em telas escuras, `corpo-leve` só a partir de 16px.

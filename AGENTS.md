@@ -50,7 +50,10 @@ Este projeto usa o design system Smart Sampa (pacote `@ade/design-system`). Siga
 ## Tipografia
 
 - Títulos e rótulos: `font-display` (Kallisto), sempre em caixa alta. Textos: `font-text` (Open Sans).
-- Caixa alta com espaçamento largo entre letras (`tracking` aberto) só em títulos de tela, rótulos curtos e no botão principal. Títulos de cards e de itens de lista usam espaçamento normal ou menor, para não quebrar linha à toa. Links e ações secundárias não levam caixa alta espaçada.
+- Kallisto em caixa alta nunca fica com espaçamento normal ou fechado: as letras se encostam e o título vira um bloco. Mínimo de 0.05em em títulos, 0.06em em títulos de card e 0.1em em rótulos pequenos. As classes prontas já trazem esses valores; não sobrescreva com `tracking-normal`, `tracking-tight` etc.
+- Pesos: títulos grandes em Light (`titulo-hero`, `titulo`); títulos de card e subtítulos em Medium (`titulo-card`, `subtitulo`); números em Bold (`numero`).
+- Títulos de cards e de itens de lista usam `titulo-card`. Links e ações secundárias não levam caixa alta: ficam na fonte de texto, em `text-ink-muted`.
+- Texto de apoio (descrições de card, legendas) fica abaixo do título na hierarquia: `text-ink-muted` ou peso leve, nunca branco cheio maior que o título.
 - Prefira as classes prontas: `titulo-hero`, `titulo`, `subtitulo`, `rotulo`, `numero`, `corpo`, `corpo-leve`, `legenda`.
 - Não use outras famílias de fonte.
 
