@@ -18,6 +18,9 @@
   --ink-muted: #a9b4cc;
   --line: #3a5084;
   --on-claro: var(--azul-escuro);
+  --destaque: var(--azul-claro);
+  --on-destaque: var(--on-claro);
+  --destaque-texto: var(--destaque);
   --status-critico: #b4383f;
   --status-critico-area: rgba(180, 56, 63, 0.35);
   --status-critico-texto: #f07a7a;
@@ -34,6 +37,7 @@
   --ink: #231f20;
   --ink-muted: #5e5a5c;
   --line: #d5d9e3;
+  --destaque-texto: #1f6f96;
   --status-critico-texto: var(--status-critico);
   --status-alerta-texto: #8a6300;
   --status-estavel-texto: #1a6f75;

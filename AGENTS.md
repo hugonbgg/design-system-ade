@@ -18,6 +18,16 @@ Este projeto usa o design system Smart Sampa (pacote `@ade/design-system`). Siga
 - Cada eixo tem cor fixa: SINCRONIZAR = rosa, PROPAGAR = lilás, CONECTAR = azul-claro, RESTAURAR = verde, IMAGINAR = azul-escuro.
 - `logo-azul-marinho` e `logo-azul` são só do logotipo. Nunca use em interface.
 
+## Destaque
+
+- Para item ativo ou selecionado, foco, link, progresso e botão principal, use o papel de destaque: `bg-destaque` com `text-on-destaque`, `text-destaque-texto`, `border-destaque`, `ring-destaque`.
+- Nunca use uma cor de eixo (`rosa`, `azul-claro`…) como destaque genérico, e nunca use as cores de status como destaque: vermelho é só `status-critico`.
+
+## Véus sobre fotos
+
+- Véus de contraste sobre foto ou vídeo (para o texto ficar legível) podem ser gradientes CSS. Use sempre cores dos tokens, por exemplo `bg-gradient-to-t from-surface/90 to-transparent`, ou `from-preto/80` quando a imagem é sempre escura.
+- Isso não vale para os gradientes "pulsar" da marca: eles são fundos decorativos e só entram como imagem de `assets/gradientes/`.
+
 ## Status
 
 - Três estados: estável, alerta, crítico.

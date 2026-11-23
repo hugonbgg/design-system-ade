@@ -17,6 +17,9 @@
   --color-ink-muted: var(--ink-muted);
   --color-line: var(--line);
   --color-on-claro: var(--on-claro);
+  --color-destaque: var(--destaque);
+  --color-on-destaque: var(--on-destaque);
+  --color-destaque-texto: var(--destaque-texto);
   --color-status-critico: var(--status-critico);
   --color-status-critico-area: var(--status-critico-area);
   --color-status-critico-texto: var(--status-critico-texto);

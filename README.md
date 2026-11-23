@@ -28,6 +28,7 @@ A paleta oficial tem seis cores. Use os nomes da paleta como nome dos tokens.
 - Texto colorido só vai sobre `azul-escuro`: `verde`, `azul-claro` e `rosa` passam de 4,5:1 ali. `lilas` não funciona como texto sobre o fundo escuro (2,6:1). No tema claro, nenhuma cor da paleta serve para texto pequeno; use `ink`.
 - O caderno escreve as etiquetas da paleta em branco sobre todas as cores. Sobre `azul-claro` e `verde` isso fica abaixo de 3:1; nas telas, prefira `on-claro`.
 - `logo-azul-marinho` e `logo-azul` são exclusivas do logotipo. Não use em interface.
+- **Destaque** é um papel, não uma cor nova: `destaque` aponta hoje para `azul-claro`. Use-o para item ativo, foco, link, progresso e botão principal, com `on-destaque` para o texto por cima e `destaque-texto` para texto colorido. Nunca use uma cor de eixo ou de status como destaque genérico.
 - `surface-raised`, `ink-muted` e `line` são derivados da paleta para dar estrutura às telas. Eles não aparecem no caderno.
 
 ## Estados da cidade (status)
@@ -53,6 +54,7 @@ Os gradientes "pulsar" são fundos de luz difusa: faixas verticais de `lilas`, `
 - Use os gradientes como fundo de telas de abertura, menus e cartazes. Não use atrás de texto corrido.
 - Coloque o texto sobre a área escura (`azul-escuro` / `preto`) do gradiente, em `branco`.
 - Não recrie os gradientes em CSS. Use as imagens do grupo.
+- Véus de contraste sobre fotos (para o texto ficar legível) podem ser gradientes CSS, sempre com cores dos tokens: `surface` ou `preto` com transparência. Eles não são os gradientes da marca.
 
 ## Tipografia
 
