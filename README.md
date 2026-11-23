@@ -98,7 +98,7 @@ O caderno não define um conjunto de ícones. As telas usam pictogramas lineares
 
 ### Num projeto com Tailwind v4
 
-1. Instale o pacote pelo GitHub: `"@ade/design-system": "github:hugonbgg/design-system-ade"` no `package.json` e `npm install` (ou `bun install`). O repositório é privado: quem instala precisa de acesso a ele. Para atualizar depois de uma mudança aqui, rode `npm update @ade/design-system`.
+1. Instale o pacote pelo GitHub: `"@ade/design-system": "github:hugonbgg/design-system-ade"` no `package.json` e `npm install` (ou `bun install`). O repositório é público, então instala em qualquer máquina ou deploy sem token. Para atualizar depois de uma mudança aqui, rode `npm update @ade/design-system`.
 2. No CSS principal:
 
 ```css
