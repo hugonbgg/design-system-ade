@@ -52,7 +52,9 @@ Este projeto usa o design system Smart Sampa (pacote `@ade/design-system`). Siga
 - Títulos e rótulos: `font-display` (Kallisto), sempre em caixa alta. Textos: `font-text` (Saira). Nunca use Kallisto em parágrafos ou frases longas: em caixa baixa e bloco, ela cansa a leitura.
 - Kallisto em caixa alta nunca fica com espaçamento normal ou fechado: as letras se encostam e o título vira um bloco. Mínimo de 0.05em em títulos, 0.06em em títulos de card e 0.1em em rótulos pequenos. As classes prontas já trazem esses valores; não sobrescreva com `tracking-normal`, `tracking-tight` etc.
 - Pesos: títulos grandes em Light (`titulo-hero`, `titulo`); títulos de card e subtítulos em Medium (`titulo-card`, `subtitulo`); números em Bold (`numero`).
-- Títulos de cards e de itens de lista usam `titulo-card`. Links e ações secundárias não levam caixa alta: ficam na fonte de texto, em `text-ink-muted`.
+- Títulos de cards e de itens de lista usam `titulo-card`. Em espaços estreitos (carrossel, balão de mapa, barra do topo) pode reduzir o tamanho com `text-sm`, mantendo a classe.
+- Links e ações secundárias não levam caixa alta: ficam na fonte de texto. Link ou ação só em texto (sem fundo nem borda) usa `text-ink-muted`. Botão secundário com fundo ou borda é um controle: usa `text-ink`.
+- Pesos da fonte de texto (Saira): só 300, 400 e 500 (`font-light`, `font-normal`, `font-medium`). Nunca `font-semibold` ou `font-bold` em texto: esses pesos não são carregados e o navegador desenha um negrito falso.
 - Texto de apoio (descrições de card, legendas) fica abaixo do título na hierarquia: `text-ink-muted` ou peso leve, nunca branco cheio maior que o título.
 - Prefira as classes prontas: `titulo-hero`, `titulo`, `subtitulo`, `rotulo`, `numero`, `corpo`, `corpo-leve`, `legenda`.
 - Não use outras famílias de fonte.
