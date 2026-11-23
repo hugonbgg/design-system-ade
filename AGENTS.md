@@ -36,7 +36,14 @@ Este projeto usa o design system Smart Sampa (pacote `@ade/design-system`). Siga
   - Texto: `text-status-estavel-texto`, `text-status-alerta-texto`, `text-status-critico-texto`.
 - Sobre `bg-status-alerta`, o texto é `text-on-claro`. Sobre `bg-status-estavel` e `bg-status-critico`, o texto é `text-branco`.
 - Região de mapa em crise: `bg-status-critico-area`.
-- Status nunca vai só na cor: sempre com ícone e palavra ("ALERTA", "CRÍTICO", "ESTÁVEL").
+- Status nunca vai só na cor: sempre com ícone e palavra ("ALERTA", "CRÍTICO", "ESTÁVEL"). A palavra pode ser a própria mensagem quando ela já diz o estado ("Não foi possível carregar a narração"): não acrescente "ALERTA:" na frente.
+
+## Erros e avisos do app
+
+- Falhas do próprio app (rede, áudio, carregamento) usam `text-status-alerta-texto` com o ícone `AlertTriangle` e uma mensagem que diga o que falhou.
+- A ação de recuperação ("Tentar novamente") é neutra: `text-ink` com `border-line`, nunca amarela nem em destaque.
+- `status-critico` fica para estados críticos da cidade ou falhas que impedem o uso do app, não para erros recuperáveis.
+- Estados de liga e desliga que não são "ativo" (som desligado, por exemplo) só trocam o ícone, em `text-ink`. Sem destaque.
 
 ## Tipografia
 
