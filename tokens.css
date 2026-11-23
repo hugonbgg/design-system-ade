@@ -1,5 +1,35 @@
 /* Smart Sampa — gerado de tokens.json por build-tokens.py. Não edite à mão. */
 
+/* Fontes com licença própria, servidas pelo próprio projeto. Os arquivos NÃO ficam neste repositório (é público): cada projeto copia os .woff2 para public/fonts/kallisto/. Sem os arquivos, a pilha cai para Lexend Exa. */
+@font-face {
+  font-family: "Kallisto";
+  src: url("/fonts/kallisto/Kallisto-Thin.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Kallisto";
+  src: url("/fonts/kallisto/Kallisto-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Kallisto";
+  src: url("/fonts/kallisto/Kallisto-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Kallisto";
+  src: url("/fonts/kallisto/Kallisto-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root,
 [data-theme="dark"] {
   color-scheme: dark;

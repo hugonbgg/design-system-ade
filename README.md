@@ -69,7 +69,7 @@ Os gradientes "pulsar" são fundos de luz difusa: faixas verticais de `lilas`, `
 - Rótulos, tags e botões em `rotulo`: Kallisto Medium 13px, caixa alta, espaçamento de 0.08em.
 - Indicadores numéricos em `numero`, com três dígitos ("040", "045").
 - Texto corrido em `corpo` (Open Sans 16/24). Em telas escuras, `corpo-leve` só a partir de 16px.
-- Kallisto é uma fonte comercial e precisa de licença e arquivos próprios (woff2). Enquanto não forem adicionados, a pilha usa **Lexend Exa** (Google Fonts) como substituta de largura parecida. Open Sans vem do Google Fonts.
+- Kallisto é licenciada (comprada da Device) e servida por cada projeto em `public/fonts/kallisto/` (Thin, Light, Medium e Bold em `.woff2`). O `tokens.css` já declara o `@font-face`. Os arquivos não ficam neste repositório, que é público: guarde o pacote original num local privado do time. Sem os arquivos, a pilha usa **Lexend Exa** (Google Fonts) como reserva. Open Sans vem do Google Fonts.
 
 ## Espaçamento e cantos
 
@@ -111,13 +111,14 @@ O caderno não define um conjunto de ícones. As telas usam pictogramas lineares
 @import "@ade/design-system/tailwind.css";
 ```
 
-3. No `index.html`, carregue as fontes:
+3. Copie os arquivos da Kallisto (`Kallisto-Thin.woff2`, `-Light`, `-Medium`, `-Bold`) para `public/fonts/kallisto/` do projeto. Só em repositório privado.
+4. No `index.html`, carregue as fontes do Google (Open Sans e a reserva Lexend Exa):
 
 ```html
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@300;500;700&family=Open+Sans:wght@300;400;600&display=swap">
 ```
 
-4. Para o agente seguir as regras, crie um `CLAUDE.md` na raiz do projeto com a linha:
+5. Para o agente seguir as regras, crie um `CLAUDE.md` na raiz do projeto com a linha:
 
 ```
 @node_modules/@ade/design-system/AGENTS.md

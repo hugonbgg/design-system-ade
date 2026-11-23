@@ -5,7 +5,9 @@ Este projeto usa o design system Smart Sampa (pacote `@ade/design-system`). Siga
 ## Como os tokens chegam ao projeto
 
 - O CSS principal importa, nesta ordem: `tailwindcss`, `@ade/design-system/tokens.css`, `@ade/design-system/tailwind.css`.
-- As fontes vêm do Google Fonts por `<link>` no `index.html`: Open Sans (300, 400, 600) e Lexend Exa (300, 500, 700). Kallisto, quando houver licença, entra na frente da pilha sozinha.
+- Kallisto é licenciada (comprada da Device) e servida pelo próprio projeto: os arquivos `Kallisto-Thin/Light/Medium/Bold.woff2` ficam em `public/fonts/kallisto/`. O `tokens.css` já declara o `@font-face` apontando para lá.
+- Nunca coloque os arquivos da Kallisto em repositório público, nem dentro deste pacote. Se o projeto for público, pare e avise.
+- Open Sans e Lexend Exa (reserva da Kallisto) vêm do Google Fonts por `<link>` no `index.html`: Open Sans (300, 400, 600) e Lexend Exa (300, 500, 700).
 - Nunca edite `tokens.css` nem `tailwind.css`: são gerados a partir de `tokens.json` no repositório do design system.
 
 ## Cores

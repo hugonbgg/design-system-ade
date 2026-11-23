@@ -28,6 +28,20 @@ color_tokens = tokens["color"]["tokens"]
 
 out = [f"/* {tokens['name']} — gerado de tokens.json por build-tokens.py. Não edite à mão. */", ""]
 
+# Fontes servidas pelo próprio projeto (arquivos fora deste repositório)
+web = tokens.get("webFonts")
+if web:
+    out.append(f"/* {web['note']} */")
+    for face in web["faces"]:
+        out.append("@font-face {")
+        out.append(f"  font-family: \"{face['family']}\";")
+        out.append(f"  src: url(\"{web['basePath']}{face['file']}\") format(\"woff2\");")
+        out.append(f"  font-weight: {face['weight']};")
+        out.append("  font-style: normal;")
+        out.append("  font-display: swap;")
+        out.append("}")
+    out.append("")
+
 # Tema padrão (primeiro tema) em :root
 out.append(f":root,\n[data-theme=\"{first}\"] {{")
 out.append(f"  color-scheme: {'dark' if first == 'dark' else 'light'};")

@@ -9,3 +9,11 @@ __pycache__/
 Thumbs.db
 Desktop.ini
 .DS_Store
+
+# Arquivos de fonte licenciados: nunca versionar (repositório público)
+Kallisto Font/
+*.zip
+*.otf
+*.ttf
+*.woff
+*.woff2
