@@ -19,6 +19,6 @@
     "./assets/*": "./assets/*"
   },
   "scripts": {
-    "build": "python build-tokens.py"
+    "tokens": "python build-tokens.py"
   }
 }
