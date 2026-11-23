@@ -1,0 +1,116 @@
+/* Smart Sampa — gerado de tokens.json por build-tokens.py. Não edite à mão. */
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@300;500;700&family=Open+Sans:wght@300;400;600&display=swap');
+
+:root,
+[data-theme="dark"] {
+  color-scheme: dark;
+  --rosa: #dc58e0;
+  --lilas: #6f51b7;
+  --azul-claro: #4aacd3;
+  --verde: #28c6a8;
+  --azul-escuro: #0e254f;
+  --preto: #191919;
+  --branco: #ffffff;
+  --logo-azul-marinho: #002c54;
+  --logo-azul: #3677bc;
+  --surface: var(--azul-escuro);
+  --surface-raised: #16336a;
+  --ink: var(--branco);
+  --ink-muted: #a9b4cc;
+  --line: #3a5084;
+  --on-claro: var(--azul-escuro);
+  --status-critico: #b4383f;
+  --status-critico-area: rgba(180, 56, 63, 0.35);
+  --status-critico-texto: #f07a7a;
+  --status-alerta: #e9c56b;
+  --status-alerta-texto: var(--status-alerta);
+  --status-estavel: #20888f;
+  --status-estavel-texto: var(--verde);
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+  --surface: #ffffff;
+  --surface-raised: #f2f4f8;
+  --ink: #231f20;
+  --ink-muted: #5e5a5c;
+  --line: #d5d9e3;
+  --status-critico-texto: var(--status-critico);
+  --status-alerta-texto: #8a6300;
+  --status-estavel-texto: #1a6f75;
+}
+
+:root {
+  --font-display: Kallisto, "Lexend Exa", "Open Sans", sans-serif;
+  --font-text: "Open Sans", system-ui, sans-serif;
+  --space-2: 8px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-10: 40px;
+  --radius-sm: 4px;
+  --radius-md: 12px;
+  --radius-pill: 999px;
+}
+
+/* Títulos (Kallisto) */
+.titulo-hero {
+  font-family: var(--font-display);
+  font-size: 64px;
+  line-height: 1.05;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+.titulo {
+  font-family: var(--font-display);
+  font-size: 40px;
+  line-height: 1.1;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+.subtitulo {
+  font-family: var(--font-display);
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.rotulo {
+  font-family: var(--font-display);
+  font-size: 13px;
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.numero {
+  font-family: var(--font-display);
+  font-size: 48px;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Textos (Open Sans) */
+.corpo {
+  font-family: var(--font-text);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+.corpo-leve {
+  font-family: var(--font-text);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 300;
+}
+.legenda {
+  font-family: var(--font-text);
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+}

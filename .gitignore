@@ -1,0 +1,11 @@
+# PDFs de referência (centenas de MB) ficam fora do git
+*.pdf
+
+# Python
+__pycache__/
+*.pyc
+
+# Sistema
+Thumbs.db
+Desktop.ini
+.DS_Store
